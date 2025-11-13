@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <title>Фельдман Николь</title>
+        <!-- Общие метатеги: кодировка (charset) -->
+        <meta charset="utf-8">
+        <!--
+            Далее задаются метатеги с атрибутом property. Значение атрибута начинается с "og:". 
+            Это метатеги для социальных сетей. Они передают соцсетям 
+            и мессенджерам основную информацию о сайте. Эта информация отображается,
+            например, в сообщении в мессенджере, когда вы отправляете ссылку
+            на сайт. Или на странице в соцсети, когда делитесь ссылкой.
+            Подробнее см на https://ogp.me/.
+        -->
+        <!-- Метатег, который указывает на основной язык страницы -->
+        <meta property="og:locale" content="ru_RU">
+        <!-- Метатеги, которые указывают на тип страницы -->
+        <meta property="og:type" content="website">
+        <!-- Метатеги и тег title, которые указывают на название страницы -->
+        <title>Портфолио Николь</title>
+        <meta property="og:title" content="Портфолио (пример)">
+        <!-- Метатеги, которые указывают на описание страницы -->
+        <meta name="description" content="Описание сайта отображаемое в превью ссылок">
+        <meta property="og:description" content="Описание сайта отображаемое в превью ссылок">
+        <!-- Метатег, который указывает ключевые слова страницы -->
+        <meta name="keywords" content="портфолио, веб-разработчик, веб-дизайнер, сайты">
+
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -21,27 +43,23 @@
                 </li>
             </ul>
             <div>
-                <a class="button-navigation">
+                <a class="button-navigation" href="#back-color-section-end">
                     <span>Связаться со мной</span>
                 </a>
             </div>
         </nav>
         <main>
-            <section>
+            <section id="main-content">
                 <h1>Фельдман Николь</h1>
                 <p>Разрабатываю сайты-визитки, рекламные лендинги и другие интересные проекты</p>
-                <figure>
-                    <img class="main-coding-img" src="/images/main-coding.jpg" alt="девушка программирует">
-                </figure>
+                <img class="main-coding-img" src="/images/main-coding.jpg" alt="девушка программирует">
             </section>
             <section class="back-color-section" id="section-about-me">
                 <h1>Привет, я веб-разработчик</h1>
                 <p>Описание автора портфолио. Более подробный текст про вас,
                     что вы делаете, какими проектами занимаетесь,
                     какой у вас опыт в профессии.</p>
-                <figure>
-                    <img id="img-me" src="/images/me.jpg" alt="моя фотография">
-                </figure>
+                <img id="img-me" src="/images/me.jpg" alt="моя фотография">
             </section>
             <section id="skills-sections">
                 <h1>Навыки и стек технологий</h1>
@@ -107,12 +125,12 @@
                         <a>Проект 6</a>
                     </div>
                 </div>
-                <a class="button-git">
-                    <span>Посмотреть на GitHub
+                <a class="button-git" href="https://github.com/nikk3456">
+                    <span>Посмотреть на GitHub</span>
                 </a>
             </section>
             <section class="back-color-section" id="back-color-section-end">
-                <h1 class="special-h1">Хотите заказать сайт?</h1>
+                <h1 id="special-h1">Хотите заказать сайт?</h1>
                 <p>Напишите мне, чтобы обсудить детали</p>
             </section>
             <section>
@@ -155,12 +173,12 @@
             <div class="cooperation-div">
                 <h2 class="cooperation-h2">Договоримся о сотрудничестве</h2>
                 <p class="cooperation-p">У вас есть идея проекта или предложение о работе? Напишите мне. Я открыта к разным вариантам сотрудничества.</p>
-                <a class="button-footer">Связаться с разработчиком</a>
+                <a class="button-footer" href="#back-color-section-end">Связаться с разработчиком</a>
             </div>
             <div class="icons">
-                <a class="social-network-icon" id="tg"></a>
-                <a class="social-network-icon" id="git"></a>
-                <a class="social-network-icon" id="whatsapp"></a>
+                <a class="social-network-icon" id="tg" href="https://t.me/umvbz"></a>
+                <a class="social-network-icon" id="git" href="https://github.com/nikk3456"></a>
+                <a class="social-network-icon" id="whatsapp" href="https://wa.me/89522775368"></a>
             </div>
             <div class="links">
                 <a href="https://ru.freepik.com/free-vector/colorful-illustration-female-programmer-working_5483075.htm">Изображение от freepik</a><br>
