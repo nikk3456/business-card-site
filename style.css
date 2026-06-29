@@ -5,9 +5,9 @@
 }
 
 body{
-    font-family: "TildaSans", sans-serif;
-    font-size: 32px;
-    font-weight: lighter;
+    font-family: 'Tilda Sans', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
     color: #141C3A;
 }
 
@@ -16,11 +16,12 @@ nav{
     justify-content: end;
     gap: 169px;
     height: 126px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 
 nav ul{
@@ -29,7 +30,7 @@ nav ul{
     padding: 10px;
     font-size: 22px;
     justify-content: space-between;
-    font-weight: bold;
+    font-weight: 700;
     gap: 117px;
 }
 
@@ -60,12 +61,11 @@ h3{
 }
 
 .h3-section{
-    color: #FF9235;
+    color: var(--orange);
     margin-bottom: 12px;
 }
 
 main{
-    /* padding: 60px 120px; */
     text-align: center;
 }
 
@@ -82,9 +82,10 @@ p{
 .button-navigation, .button-git, .div-with-form button, .arrow{
     display: block;
     border: 2px solid;
-    border-color: #77A6F7;
+    background-color: var(--white);
+    border-color: var(--light-blue);
     border-radius: 15px;
-    color: #77A6F7;
+    color: var(--light-blue);
     font-size: 24px;
     width: 332.5px;
     height: 60px;
@@ -97,21 +98,21 @@ p{
 }
 
 .button-navigation{
-    margin-right: 137.7px;
+    margin: 0 137.7px 0 0;
+    text-align: center;
 }
 
 .button-footer{
     border: 2px solid;
-    border-color: #FFFFFF;
+    border-color: var(--white);
     border-radius: 15px;
-    color: #FFFFFF;
+    color: var(--white);
     font-size: 28px;
     white-space: nowrap;
     background-color: rgb(91, 74, 179);
     padding: 20px;
-    margin: 10px 30px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .special-h1{
@@ -119,13 +120,15 @@ p{
 }
 
 .button-footer:hover{
-    background-color: #FFFFFF;
+    background-color: var(--white);
     color: rgb(91, 74, 179);
+    transition: 1s;
 }
 
 .button-navigation:hover, .button-git:hover, .div-with-form button:hover, .arrow:hover{
-    background-color: #77A6F7;
-    color: #FFFFFF;
+    background-color: var(--light-blue);
+    color: var(--white);
+    transition: 1s;
 }
 
 .main-coding-img{
@@ -133,7 +136,7 @@ p{
 }
 
 .back-color-section{
-    background-color: #77A6F7;
+    background-color: var(--light-blue);
     width: 100%;
     padding: 60px 120px;
 }
@@ -156,7 +159,7 @@ p{
 #img-me{
     width: 450px;
     border-radius: 30px;
-    border: 5px solid #77A6F7;
+    border: 5px solid var(--light-blue);
 }
 
 .skills-colums{
@@ -167,13 +170,13 @@ p{
     grid-template-rows: repeat(2, 1fr);
     border: 1px solid;
     border-radius: 20px;
-    border-color: rgb(119, 166, 247);
+    border-color: var(--light-blue);
 }
 
 
-.one-skills-colum:not(:last-child){
+.one-skills-colum:not(:last-child, #not-one-skills-colum){
     border-right: 1px solid;
-    border-color: rgb(119, 166, 247);
+    border-color: var(--light-blue);
 }
 
 .skills-img{
@@ -197,109 +200,195 @@ p{
 }
 
 .projects-grid-item{
-    border: 3px solid #77A6F7;
+    border: 3px solid var(--purple);
     border-radius: 20px;
     align-content: center;
+    width: 100%;
+    height: 242px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.projects-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
+
+.projects-grid-item:hover,
+.projects-grid-item:hover a{
+    color: var(--white);
+    transition: 1s;
+    transform: scale(1.05);
     
+}
+
+.projects-grid-item:hover{
+    background-color: var(--purple);
+    transition: 1s;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.projects-content{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 53px auto;
+}
+
+.button-projects{
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border: 2px solid;
+    background-color: transparent;
+    border-color: var(--white);
+    border-radius: 15px;
+    color: var(--white);
+    font-size: 25px;
+    width: 235.7px;
+    height: 45px;
+    align-content: center;
+    margin: 0 auto;
+    height: 45px;
+    width: 235.7px;
+    margin-top: 30px;
+}
+
+.projects-content p{
+    color: var(--white);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    margin-bottom: 15px;
+}
+
+.projects-grid-item:hover .projects-img {
+    opacity: 0;
+}
+
+.projects-grid-item:hover .button-projects,
+.projects-grid-item:hover .projects-content p,
+.projects-grid-item:hover a {
+    opacity: 1;
+    color: var(--white);
 }
 
 .div-with-form{
     display: flex;
-    padding: 0 129px 164px 81px;
+    margin: 100px auto 164px auto;
+    gap: 136px;
+    width: 1710px;
 }
 
 .div-with-form img{
     width: 646px;
-    margin-right: 136px;
 }
 
 .div-with-form form{
     width: 100%;
-    padding: 50px 0;
     font-size: 20px;
     text-align: left;
 }
 
 .top-cell{
     display: flex;
-    width: 100%;
-    gap: 60px;
-    margin-bottom: 20px;
+    gap: 132px;
+    margin-bottom: 48px;
 }
 
 .top-cell input{
-    width: 100%;
-    height: 40px;
-}
-
-.top-cell-style{
-    padding: 10px;
-    width: 50%;
-}
-
-.bottom-cell-style{
-    padding: 10px;
+    width: 398px;
+    height: 74px;
 }
 
 .bottom-cell-style input{
-    width: 100%;
-    height: 200px;
+    width: 928px;
+    height: 342px;
 }
 
 .bottom-cell-style input, .top-cell input{
-    border: 2px solid #77A6F7;
+    border: 2px solid var(--light-blue);
     border-radius: 10px;
     margin-top: 20px;
 }
 
 .div-with-form button{
-    margin: 10px 0 0 10px;
+    margin: 51px 0 0 auto;
+    background-color: var(--white);
+}
+
+#feedback-section{
+    width: 735px;
+    margin: 0 auto;
+}
+
+#feedback-section > p{
+    margin: 0;
 }
 
 .img-feedback{
     width: 350px;
-    border: 3px solid #77A6F7;
+    border: 3px solid var(--light-blue);
     border-radius: 10px;
-    margin: 40px 0;
+    margin: 51px 0 71px 0;
 }
 
 .info-feedback{
     font-size: 16px;
-    margin: 30px 0;
+    margin: 20px 0 41px 0!important;
+}
+
+.arrow{
+    margin: 0;
+    width: 63px;
+    height: 40px;
+}
+
+#arrows{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
 footer{
-    background: #77A6F7;
-    margin: -8px;
-    margin-top: 100px;
-    padding-top: 50px;
-    position: relative;
-    height: 400px;
+    background: var(--light-blue);
+    margin-top: 140px;
+    padding-top: 70px;
+    height: 524px;
 }
 
 .cooperation-div{
     position: relative;
-    top: -33%;
+    top: -37%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    background-color: rgb(91, 74, 179);
-    width: 80%;
+    background-color: var(--purple);
+    width: 1344px;
+    height: 190px;
     text-align: center;
     align-items: center;
     border-radius: 12px;
-    padding: 30px 15px;
-    color: #FFFFFF;
+    color: var(--white);
+    gap: 60px;
+    justify-content: space-between;
+    padding: 0 65px;
 }
 
 .cooperation-h2{
-    margin: 20px 20px;
     font-size: 30px;
+    width: 323px;
 }
 
 .cooperation-p{
     font-size: 20px;
-    margin: 20px 10px;
+    margin: 0;
+    width: 466.7px;
 }
 
 .arrow{
@@ -307,52 +396,7 @@ footer{
     border-radius: 30px;
 }
 
-.social-network-icon{
-    padding: 0 15px;
-}
 
-.icons{
-    text-align: center;
-    margin-top: -60px;
-    display: flex;
-    margin-left: 45%;
-}
-
-#whatsapp{
-    width: 32px;
-    height: 32px;
-    background-image: url('/images/icon-whatsapp.png');
-    background-position: 0 0;
-    background-repeat: no-repeat;
-}
-
-#whatsapp:hover{
-    background-image: url('/images/white-icon-whatsapp.png');
-}
-
-#tg{
-    width: 32px;
-    height: 32px;
-    background-image: url('/images/icon-telegram.png');
-    background-position: 0 0;
-    background-repeat: no-repeat;
-}
-
-#tg:hover{
-    background-image: url('/images/white-icon-telegram.png');
-}
-
-#git{
-    width: 32px;
-    height: 32px;
-    background-image: url('/images/icon-github.png');
-    background-position: 0 0;
-    background-repeat: no-repeat;
-}
-
-#git:hover{
-    background-image: url('/images/white-icon-github.png');
-}
 
 .links{
     font-size: 16px;

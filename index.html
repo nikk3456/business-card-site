@@ -11,6 +11,7 @@
             на сайт. Или на странице в соцсети, когда делитесь ссылкой.
             Подробнее см на https://ogp.me/.
         -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Метатег, который указывает на основной язык страницы -->
         <meta property="og:locale" content="ru_RU">
         <!-- Метатеги, которые указывают на тип страницы -->
@@ -25,6 +26,8 @@
         <meta name="keywords" content="портфолио, веб-разработчик, веб-дизайнер, сайты">
 
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="assets/colors.css">
+        <link rel="stylesheet" href="assets/fonts/fonts.css">
     </head>
     <body>
         <nav>
@@ -52,34 +55,34 @@
             <section id="main-content">
                 <h1>Фельдман Николь</h1>
                 <p>Разрабатываю сайты-визитки, рекламные лендинги и другие интересные проекты</p>
-                <img class="main-coding-img" src="/images/main-coding.jpg" alt="девушка программирует">
+                <img class="main-coding-img" src="assets/images/main-coding.jpg" alt="девушка программирует">
             </section>
             <section class="back-color-section" id="section-about-me">
                 <h1>Привет, я веб-разработчик</h1>
                 <p id="p-about">Описание автора портфолио. Более подробный текст про вас,
                     что вы делаете, какими проектами занимаетесь,
                     какой у вас опыт в профессии.</p>
-                <img id="img-me" src="/images/me.jpg" alt="моя фотография">
+                <img id="img-me" src="assets/images/me.jpg" alt="моя фотография">
             </section>
             <section id="skills-sections">
                 <h1 id="h1-skills">Навыки и стек технологий</h1>
                 <div class="skills-colums">
                     <div class="one-skills-colum">
-                        <img class="skills-img" src="/images/html-animated-icon.gif" alt="анимация с надписью html">
+                        <img class="skills-img" src="assets/gifs/html-animated-icon.gif" alt="анимация с надписью html">
                         <h2>Разработка сайтов</h2>
                         <p class="p-string-1">
                             Фронтенд, бэкенд, базы данных, DevOps....
                         </p>
                     </div>
                     <div class="one-skills-colum">
-                        <img class="skills-img" src="/images/design-animated-icon.gif" alt="анимация с кистью и линейкой">
+                        <img class="skills-img" src="assets/gifs/design-animated-icon.gif" alt="анимация с кистью и линейкой">
                         <h2>Дизайн</h2>
                         <p class="p-string-1">
                             Навыки дизайна...
                         </p>
                     </div>
-                    <div class="one-skills-colum">
-                        <img class="skills-img" src="/images/goal-animated-icon.gif" alt="анимация с горами">
+                    <div id="not-one-skills-colum" class="one-skills-colum">
+                        <img class="skills-img" src="assets/gifs/goal-animated-icon.gif" alt="анимация с горами">
                         <h2>Soft skills</h2>
                         <p class="p-string-1">
                             Мои скилы...
@@ -113,22 +116,58 @@
                 <h1 id="h1-projects">Проекты</h1>
                 <div class="projects-grid">
                     <div class="projects-grid-item">
-                        <a>Проект 1</a>
+                        <img class="projects-img" src="assets/images/muzcina-v-otziv.jpg" alt="скриншот 1 проекта">
+                        <div class="projects-content">
+                            <p>Проект 1</p>
+                            <a class="button-projects" href="https://github.com/nikk3456">
+                                <span>Посмотреть сайт</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects-grid-item">
-                        <a>Проект 2</a>
+                        <img class="projects-img" src="assets/images/phone.jpg" alt="скриншот 2 проекта">
+                        <div class="projects-content">
+                            <p>Проект 2</p>
+                            <a class="button-projects" href="https://github.com/nikk3456">
+                                <span>Посмотреть сайт</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects-grid-item">
-                        <a>Проект 3</a>
+                        <img class="projects-img" src="assets" alt="скриншот 3 проекта">
+                        <div class="projects-content">
+                            <p>Проект 3</p>
+                            <a class="button-projects" href="https://github.com/nikk3456">
+                                <span>Посмотреть сайт</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects-grid-item">
-                        <a>Проект 4</a>
+                        <img class="projects-img" src="assets/images/main-coding.jpg" alt="скриншот 4 проекта">
+                        <div class="projects-content">
+                            <p>Проект 4</p>
+                            <a class="button-projects" href="https://github.com/nikk3456">
+                                <span>Посмотреть сайт</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects-grid-item">
-                        <a>Проект 5</a>
+                        <img class="projects-img" src="assets" alt="скриншот 5 проекта">
+                        <div class="projects-content">
+                            <p>Проект 5</p>
+                            <a class="button-projects" href="https://github.com/nikk3456">
+                                <span>Посмотреть сайт</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects-grid-item">
-                        <a>Проект 6</a>
+                        <img class="projects-img" src="assets" alt="скриншот 6 проекта">
+                        <div class="projects-content">
+                            <p>Проект 6</p>
+                            <a class="button-projects" href="https://github.com/nikk3456">
+                                <span>Посмотреть сайт</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <a class="button-git" href="https://github.com/nikk3456">
@@ -141,7 +180,7 @@
             </section>
             <section>
                 <div class="div-with-form">
-                    <img src="/images/phone.jpg" alt="рисунок телефона">
+                    <img src="assets/images/phone.jpg" alt="рисунок телефона">
                     <form>
                         <div class="top-cell">
                             <div class="top-cell-style">
@@ -163,13 +202,13 @@
                     </form>
                 </div>
             </section>
-            <section>
+            <section id="feedback-section">
                 <h1>Отзывы</h1>
                 <p>Люди, с которыми я работала, остаются довольны результатом</p>
-                <img class="img-feedback" src="/images/muzcina-v-otziv.jpg" alt="фото человека">
+                <img class="img-feedback" src="assets/images/muzcina-v-otziv.jpg" alt="фото человека">
                 <p>"Супер отзыв"</p>
                 <p class="info-feedback">Имя Фамилия<br>Компания, город</p>
-                <div>
+                <div id="arrows">
                     <button class="arrow">⭠</button>
                     <button class="arrow">⭢</button>
                 </div>
