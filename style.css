@@ -266,6 +266,7 @@ p{
     opacity: 0;
     transition: opacity 0.5s ease;
     margin-bottom: 15px;
+    font-size: 25px;
 }
 
 .projects-grid-item:hover .projects-img {
