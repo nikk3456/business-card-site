@@ -9,13 +9,23 @@ body{
     font-weight: 400;
     font-size: 36px;
     color: #141C3A;
+    margin-top: 206px;
+}
+
+.menu-icon{
+    display: none;
 }
 
 nav{
     display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
     justify-content: end;
     gap: 169px;
     height: 126px;
+    background-color: var(--white);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -404,4 +414,39 @@ footer{
     font-size: 16px;
     text-align: center;
     margin-top: 100px;
+}
+
+
+@media (max-width: 500px){
+    nav{
+        justify-content: start;
+        gap: 0px;
+        height: 376px;
+        flex-direction: column;
+    }
+
+    .menu-icon{
+        display: block;
+        width: 55px;
+        height: 55px;
+        margin-left: 60px;
+    }
+
+    nav ul{
+        order: 2;
+        flex-direction: column;
+        padding: 0px;
+        gap: 25px;
+        padding: 0 0 31px 59px;
+        margin: 0;
+    }
+
+    .top-line-nav{
+        display: flex;
+        flex-direction: row;
+        order: 1;
+        height: 126px;
+        margin: 0;
+        align-items: center;
+    }
 }
