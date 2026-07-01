@@ -10,6 +10,8 @@ body{
     font-size: 36px;
     color: #141C3A;
     margin-top: 206px;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 .menu-icon{
@@ -20,13 +22,17 @@ nav{
     display: flex;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 999;
     justify-content: end;
-    gap: 169px;
+    gap: 9vw;
     height: 126px;
     background-color: var(--white);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-line-nav{
+    width: 22vw;
 }
 
 a{
@@ -41,7 +47,7 @@ nav ul{
     font-size: 22px;
     justify-content: space-between;
     font-weight: 700;
-    gap: 117px;
+    gap: 5vw;
 }
 
 nav div, nav ul{
@@ -97,7 +103,7 @@ p{
     border-radius: 15px;
     color: var(--light-blue);
     font-size: 24px;
-    width: 332.5px;
+    width: 17vw;
     height: 60px;
     align-content: center;
     margin: 100px auto;
@@ -417,12 +423,23 @@ footer{
 }
 
 
-@media (max-width: 500px){
+@media (max-width: 900px){
+
+    body{
+        font-size: 6vw;
+        margin-top: 200px;
+    }
+
+    h1{
+        font-size: 12vw;
+    }
+
     nav{
         justify-content: start;
         gap: 0px;
-        height: 376px;
+        height: auto;
         flex-direction: column;
+        width: 100vw;
     }
 
     .menu-icon{
@@ -433,6 +450,7 @@ footer{
     }
 
     nav ul{
+        display: none;
         order: 2;
         flex-direction: column;
         padding: 0px;
@@ -444,9 +462,120 @@ footer{
     .top-line-nav{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         order: 1;
         height: 126px;
         margin: 0;
         align-items: center;
+        width: 100vw;
+    }
+
+    .button-navigation{
+        width: 40vw;
+        margin-right: 10vw;
+        height: 70px;
+    }
+
+    .main-coding-img{
+        width: 35vmax;
+    }
+
+    #section-about-me {
+        position: relative;
+        margin-bottom: 650px;
+        padding-bottom: 200px;
+    }
+
+    .back-color-section {
+        padding: 60px 0;
+        margin: 0;
+    }
+
+    #p-about {
+        width: 90vw;
+        margin: 0 auto 60px auto;
+    }
+
+    #img-me {
+        width: 40vmax;
+    }
+
+    .skills-colums {
+        display: grid;
+        width: 90vw;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .one-skills-colum{
+        border-bottom: 1px solid;
+        border-color: var(--light-blue);
+        height: auto;
+    }
+
+    .one-skills-colum:last-child{
+        border-bottom: 0;
+    }
+
+    .one-skills-colum:not(:last-child, #not-one-skills-colum) {
+        border-right: 0;
+    }
+
+    .one-skills-colum:is(:nth-child(1), :nth-child(2), :nth-child(3)) {
+        border-bottom: 0;
+        height: 8vw;
+    }
+
+    .h3-section {
+        color: var(--orange);
+        margin-top: 28px;
+        margin-bottom: 0;
+    }
+
+    #col-1{
+        order: 1;
+    }
+    #col-2{
+        order: 3;
+    }
+    #not-one-skills-colum{
+        order: 5;
+    }
+    #col-4{
+        order: 2;
+    }
+    #col-5{
+        order: 4;
+    }
+    #col-6{
+        order: 6;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 10px;
+        width: 90vw;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .button-navigation, .button-git, .div-with-form button, .arrow {
+        width: 70vw;
+        height: 65px;
+    }
+
+    .div-with-form img {
+        width: 70vmax;
+        height: 70vmax;
+    }
+
+    .div-with-form {
+        flex-direction: column;
+        margin: 70px auto 164px auto;
+        gap: 136px;
+        width: 90vw;
     }
 }
